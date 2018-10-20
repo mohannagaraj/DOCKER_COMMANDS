@@ -1,0 +1,524 @@
+    1  useradd -G docker jenkins
+    2  apt-get install docker
+    3  apt-get update
+    4  apt-get install docker
+    5  docker --version
+    6  sudo apt-get install     apt-transport-https     ca-certificates     curl     software-properties-common
+    7  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    8  sudo apt-key fingerprint 0EBFCD88
+    9  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   10     $(lsb_release -cs) \
+   11     stable"
+   12  sudo apt-get update
+   13  sudo apt-get install docker-ce
+   14  sudo docker run hello-world
+   15  usermod -G docker jenkins
+   16  useradd jenkins
+   17  usermod -G docker jenkins
+   18  ls
+   19  docker images
+   20  docker ps
+   21  docker run -p 8080:8080 -d --name docker_deploy mohinstru87/docker_deploy:1.0.1
+   22  docker psq
+   23  docker -q
+   24  docker ps
+   25  docker images
+   26  docker inspect docker
+   27  docker inspect
+   28  docker inspect hello-world
+   29  docker run -itd hello-eorld
+   30  docker login
+   31  docker run -itd hello-eorld
+   32  docker run -itd hello-world
+   33  docker run -it --rm -p 8888:8080 hello-world
+   34  docker run -it --rm -p 8888:8080 tomcat:8.0
+   35  docker run -itd --rm -p 8888:8080 tomcat:8.0
+   36  docker run -itd  -p 8888:8080 tomcat:8.0
+   37  docker ps
+   38  docker rm 1b2b39feeb3b
+   39  docker stop 1b2b39feeb3b
+   40  docker rm 1b2b39feeb3b
+   41  docker run -d --name=webserver1 nginx:latest
+   42  docker ps
+   43  docker search nginx
+   44  docker ps -a
+   45  docker attach
+   46  docker attach e6b454e4161f
+   47  docker start 00a008ed7c98
+   48  docker ps
+   49  docker run -d --name=webserver1 nginx:latest
+   50  docker ps
+   51  docker start nginx
+   52  docker ps -a
+   53  docker start e6b454e4161f  
+   54  docker stop e6b454e4161f  
+   55  docker stop 00a008ed7c98 
+   56  docker stop fe5ce5b8e24e 
+   57  docker stop 7511b21ad4e3
+   58  docker stop 5e885c9bf39
+   59  docker ps
+   60  docker ps -a
+   61  docker attach e6b454e4161f
+   62  docker start e6b454e4161f
+   63  docker attach e6b454e4161f
+   64  docker -d attach e6b454e4161f
+   65  docker attach
+   66  docker attach ~/ls -la e6b454e4161f
+   67  docker attach helloworld 6b454e4161f
+   68  docker attach ls 6b454e4161f
+   69  docker search nagios
+   70  docker pull nagios
+   71  docker search nagios
+   72  docker pull jasonrivers/nagios
+   73  docker run jasonrivers/nagios:latest 
+   74  docker run  -itd jasonrivers/nagios:latest 
+   75  docker ps 
+   76  docker ps -a
+   77  docker stop jasonrivers/nagios:latest
+   78  docker stop c00c84fc689c
+   79  docker stop 407ea4a9aa54 
+   80  docker ps
+   81  docker stop e6b454e4161
+   82  docker start c00c84fc689c
+   83  docker ps
+   84  docker stop c00c84fc689c
+   85  docker ps
+   86  docker start 5e885c9bf398 
+   87  docker ps
+   88  docker fe5ce5b8e24e
+   89  docker start fe5ce5b8e24e
+   90  docker ps
+   91  docker ps -a
+   92  docker ps 
+   93  docker start 00a008ed7c98
+   94  docker ps 
+   95  docker stop 00a008ed7c98
+   96  docker ps 
+   97  docker ps
+   98  docker run -itd --name=mytomcat -p 8080:8080 00a008ed7c98
+   99  docker run -itd --name=mytomcat -p 8080:8080 tomcat:latest
+  100  docker ps
+  101  docker images
+  102  docker rmi tomcat:8.0
+  103  docker ps -a
+  104  docker stop 00a008ed7c98
+  105  docker ps
+  106  docker rm 00a008ed7c98
+  107  docker ps -a
+  108  docker images
+  109  docker rmi tomcat:8.0
+  110  docker ps -a -a
+  111  ls
+  112  docker ps -q -a
+  113  docker ps
+  114  docker rm 'docker ps -q -a'
+  115  docker rm `docker ps -q -a`
+  116  docker ps -q -a
+  117  docker inspect 108211d9c950 | grep ipaddres
+  118  docker inspect 108211d9c950 | grep ipaddress
+  119  docker inspect 108211d9c950 | grep IP*
+  120  docker inspect 108211d9c950 | grep IPAdd*
+  121  docker inspect 108211d9c950 | grep IPAdd
+  122  clear
+  123  docker inspect 108211d9c950 | grep IPAdd
+  124  docker images
+  125  docker run -itd --name=mywebserver2 -p tomcat:latest
+  126  docker run -itd --name=mywebserver2  tomcat:latest
+  127  docke rps
+  128  docker ps
+  129  docker stop b6a2569fda50
+  130  docker stop 108211d9c950 
+  131  docker ps
+  132  docker rm `docker ps -q -q`
+  133  docker rm `docker ps -q -a`
+  134  docker run -itd name=myweb -P tomcat:latest
+  135  docker run -itd --name=myweb -P tomcat:latest
+  136  docker inspect | grep Port*
+  137  docker inspect 108211d9c950  | grep Port*
+  138  docker ps
+  139  docker inspect 503d8606916f 
+  140  docker inspect 503d8606916f | grep IPAd*
+  141  docker inspect 503d8606916f | grep Port*
+  142  docker inspect 503d8606916f | grep Por*
+  143  docker ps
+  144  docker port myweb $8080
+  145  docker port myweb $32768
+  146  docker port myweb $ 32768
+  147  docker port myweb $32768
+  148  docker port myweb $-32768
+  149  docker port myweb $032768
+  150  docker port myweb $08080
+  151  docker run -itd --name=testubuntu ubuntu:latest
+  152  docker ps
+  153  ls
+  154  touch hello
+  155  docker exec -it testubuntu ~/ls-la
+  156  docker exec testubuntu ~/ls-la
+  157  docker container ls
+  158  docker container la -aq
+  159  docker container ls -aq
+  160  docker container ls -all
+  161  docker version
+  162  docker info
+  163  clear
+  164  docker info
+  165  clear
+  166  docker info
+  167  clear
+  168  docker version
+  169  df -h
+  170  cd /var/lib/docker/
+  171  ls
+  172  ls -la
+  173  cd containerd/
+  174  ls
+  175  cd daemon/
+  176  ls
+  177  cd ../..
+  178  docker stop  testubuntu
+  179  docker ps
+  180  docker ps -a 
+  181  docker attach testubuntu
+  182  docker restart testubuntu
+  183  docker attach testubuntu
+  184  cd /var/lib/docker/
+  185  ls
+  186  cd containers
+  187  ls
+  188  cd ../..
+  189  cd docker/
+  190  cd image/
+  191  ls
+  192  cd overlay2/
+  193  ls
+  194  cd imagedb/
+  195  ls
+  196  cd content/
+  197  ls
+  198  cd sha256/
+  199  ls
+  200  cd
+  201  docker ps
+  202  docker run -itd ubuntu:latest
+  203  docker  ps
+  204  docker attach 604a56e337c1
+  205  ls
+  206  ps
+  207  docker ps
+  208  docker run ubuntu:latest
+  209  docker ps
+  210  docker run -itd ubuntu:latest
+  211  docker ps
+  212  docker attach cid_brown
+  213  cid_brown
+  214  docker attach lucid_brown
+  215  docker ps
+  216  docker ps -a
+  217  docker commit -m "ubuntu with upgrade and a test user installed" -a mohinstru87 mohinstru87/ubuntu/v1
+  218  docker commit -m "ubuntu with upgrade and a test user installed" -a lucid_brown mohinstru87 mohinstru87/ubuntu/v1
+  219  docker commit -m "ubuntu with upgrade and a test user installed" -a mohinstru87 lucid_brown  mohinstru87/ubuntu/v1
+  220  docker images
+  221  docker search mohins
+  222  docker push mohinstru87/ubuntu/v1
+  223  docker run -itd mohinstru87/ubuntu/v1
+  224  docker attach d6cf2384
+  225  mkdir docker_files
+  226  cd docker_files/
+  227  vi Dockerfile
+  228  docker images
+  229  ls
+  230  vi Dockerfile 
+  231  docker build -t="ubuntu with ssh installed" mohinstru87/ubuntu/v2
+  232  docker build -t=mohinstru87/ubuntu/v2 .
+  233  apt-get install open-ssh
+  234  vi Dockerfile 
+  235  docker build -t=mohinstru87/ubuntu/v2 .
+  236  docker images
+  237  docker run -itd mohinstru87/ubuntu/v2
+  238  docker ps
+  239  docker stop vigilant_cray 
+  240  docker rm `docker ps -aq`
+  241  docker ps
+  242  docker ps -aq
+  243  cd
+  244  ls
+  245  docker images
+  246  docker ps
+  247  docker run -itd mohinstru87/ubuntu/v2
+  248  docker exec 3450a2159 which ssh
+  249  docker exec 3450a2159 useradd mohan
+  250  docker exec 3450a2159 ls -a /etc
+  251  docker exec 3450a2159 ls -a /etc/shadow
+  252  docker exec 3450a2159 ls -a /etc/shadow/
+  253  docker exec 3450a2159 cat /etc/shadow/
+  254  docker exec 3450a2159 /bin/cat /etc/shadow/
+  255  docker exec 3450a2159 /bin/cat /etc/shadow
+  256  history
+  257  docker exec 3450a2159 mkdir ~/mohan/test
+  258  docker exec 3450a2159 mkdir ~/mohan
+  259  docker pull nginx:lates
+  260  docker pull nginx:latest
+  261  docker images
+  262  docker run -d nginx:latest
+  263  docker ps
+  264  docker inspect  trusting_thompson
+  265  apt-get install elinks
+  266  docker inspect  trusting_thompson | grep ip
+  267  docker inspect  trusting_thompson | grep IP
+  268  elinks 172.17.0.3
+  269  elinks localhost
+  270  ls
+  271  docker ps
+  272  elinks 172.17.0.3
+  273  docker localhost
+  274  elinks localhost
+  275  clear
+  276  docker ps
+  277  docker stop  keen_wescoff
+  278  docker run -itd -p 80:80 nginx:latest
+  279  docker run -itd -p 8080:80 nginx:latest
+  280  docker run -itd _p 8085:80 nginx:latest
+  281  docker run -itd -p 8085:80 nginx:latest
+  282  elinks  keen_wescoff
+  283  docker ps
+  284  clear
+  285  docker ps
+  286  docker inspect  nostalgic_vaughan | grep IPA 
+  287  docker inspect   gracious_panini | grep IPA 
+  288  docker inspect   awesome_mestorf  | grep IPA 
+  289  elinks 172.17.0.5
+  290  elinks localhost
+  291  elinks localhost:80
+  292  elinks localhost:8080
+  293  clear
+  294  docker ps
+  295  elinks localhost:8085
+  296  docker ps
+  297  docker inspect  nostalgic_vaughan
+  298  elinks 172.17.0.5
+  299  elinks localhost
+  300  docker ps
+  301  docker stop  trusting_thompson
+  302  elinks localhost
+  303  elinks localhost:8080
+  304  docker ps
+  305  docker stop  nostalgic_vaughan
+  306  docker stop  gracious_panini
+  307  docker ps
+  308  elinks awesome_mestorf
+  309  docker ps
+  310  docker inspect  awesome_mestorf | grep IPA
+  311  elinks 172.17.0.2
+  312  elinks localhost
+  313  elinks localhost:80
+  314  elinks http://172.17.0.2
+  315  elinks http://localhost
+  316  docker ps
+  317  docker ps -q -q
+  318  docker ps -q -a
+  319  docker ps  -a
+  320  docker restart  nostalgic_vaughan
+  321  docker ps
+  322  docker inspect  nostalgic_vaughan
+  323  elinks http//:172.17.0.3
+  324  elinks http://172.17.0.3
+  325  elinks http://localhost
+  326  elinks http://localhost:8085
+  327  docker ps
+  328  docker stop  awesome_mestorf
+  329  elinks http://localhost
+  330  elinks http://localhost:80
+  331  elinks http://localhost:8085
+  332  ls
+  333  cd docker_files/
+  334  vi Dockerfile 
+  335  docker build -t mohinstru87/ubuntu_nonrootuser:v3 .
+  336  vi Dockerfile 
+  337  docker build -t mohinstru87/ubuntu_nonrootuser:v3 .
+  338  vi Dockerfile 
+  339  docker build -t mohinstru87/ubuntu_nonrootuser:v3 .
+  340  docker build -t mohinstru87/ubuntu_nonrootuser:v4 .
+  341  vi Dockerfile 
+  342  docker build -t mohinstru87/ubuntu_nonrootuser:v4 .
+  343  vi Dockerfile 
+  344  docker build -t mohinstru87/ubuntu_nonrootuser:v4 .
+  345  vi Dockerfile 
+  346  docker build -t mohinstru87/ubuntu_nonrootuser:v4 .
+  347  vi Dockerfile 
+  348  docker build -t mohinstru87/ubuntu_nonrootuser:v4 .
+  349  docker ps
+  350  docker images
+  351  docker run -itd mohinstru87/ubuntu_nonrootuser:v4
+  352  docker ps
+  353  docker attach  elastic_almeida
+  354  docker ps
+  355  docker start elastic_almeida
+  356  docker ps
+  357  docker exec -u 0 -t elastic_almeida
+  358  docker exec -u 0 -it /bin/bash  elastic_almeida
+  359  docker exec -u 0 -it elastic_almeida /bin/bash
+  360  docker ps
+  361  docker stop  nostalgic_vaughan
+  362  docker stop   elastic_almeida
+  363  ls
+  364  vi Dockerfile 
+  365  cd ..
+  366  pwd
+  367  docker build -t mohinstru87/ubuntu_nonrootuser:v1
+  368  docker build -t mohinstru87/ubuntu_nonrootuser:v1 < ~/docker_files
+  369  docker build -t mohinstru87/ubuntu_nonrootuser:v1 < ~/docker_files/Dockerfile
+  370  docker build -t mohinstru87/ubuntu_nonrootuser:v1 << ~/docker_files/Dockerfile
+  371  docker build -t mohinstru87/ubuntu_nonrootuser:v1 < ~/docker_files/Dockerfile
+  372  docker build -t=mohinstru87/ubuntu_nonrootuser:v1 < ~/docker_files/Dockerfile
+  373  cd docker_files/
+  374  docker build -t=mohinstru87/ubuntu_nonrootuser:v1 .
+  375  docker images
+  376  docker rmi 703e15536b41
+  377  docker rmi -f 4e97a56f2f64
+  378  docker rmi -f 703e15536b41
+  379  docker images
+  380  ls
+  381  vi Dockerfile 
+  382  docker build -t mohinstru87/javauubuntu:1.0.1 .
+  383  vi Dockerfile 
+  384  docker ps
+  385  docker images
+  386  docker run -itd ubuntu:lates
+  387  docker run -itd ubuntu:latest
+  388  docker attach 614477d0
+  389  vi Dockerfile 
+  390  docker images
+  391  docker build -t mohinstru87/java_ubuntu:v1 .
+  392  vi Dockerfile 
+  393  docker build -t mohinstru87/java_ubuntu:v1 .
+  394  vi Dockerfile 
+  395  docker build -t mohinstru87/java_ubuntu:v1 .
+  396  vi Dockerfile 
+  397  docker build -t mohinstru87/java_ubuntu:v1 .
+  398  vi Dockerfile 
+  399  docker build -t mohinstru87/java_ubuntu:v1 .
+  400  ls
+  401  vi Dockerfile 
+  402  docker build -t mohinstru87/java_ubuntu:v1 .
+  403  vi Dockerfile 
+  404  docker build -t mohinstru87/java_ubuntu:v1 .
+  405  ls
+  406  mkdir JAVA_ORACLE
+  407  cd JAVA_ORACLE/
+  408  vi Dockerfile
+  409  ls
+  410  docker build -t mohinstru87/java_oracle:v1 .
+  411  ls
+  412  vi Dockerfile 
+  413  docker build -t mohinstru87/java_oracle:v1 .
+  414  vi Dockerfile 
+  415  docker build -t mohinstru87/java_oracle:v1 .
+  416  vi Dockerfile 
+  417  apt-get upgrade
+  418  vi Dockerfile 
+  419  docker build -t mohinstru87/java_oracle:v1 .
+  420  docker images
+  421  docker run -itd mohinstru87/java_oracle:v1
+  422  docker ps
+  423  docker exec cocky_nightingale which java
+  424  docker attach cocky_nightingale
+  425  ls
+  426  docker logs cocky_nightingale
+  427  ls
+  428  env
+  429  cd ..
+  430  ls
+  431  cmd_docker
+  432  mkdir cmd_docker
+  433  vi Dockerfile
+  434  docker build -t mohinstru87/cmd_ubuntu:v1 .
+  435  vi Dockerfile
+  436  docker build -t mohinstru87/cmd_ubuntu:v1 .
+  437  vi Dockerfile
+  438  docker build -t mohinstru87/cmd_ubuntu:v1 .
+  439  docker images
+  440  docker run -it mohinstru87/cmd_ubuntu:v1
+  441  docker images
+  442  ls
+  443  cd cmd_docker/
+  444  ls
+  445  cd ..
+  446  vi Dockerfile 
+  447  docker run -it mohinstru87/cmd_ubuntu:v2
+  448  docker run -it mohinstru87/cmd_ubuntu:v2 .
+  449  docker build -t mohinstru87/cmd_ubuntu:v2 .
+  450  docker images'
+  451  docker images
+  452  docker run -it mohinstru87/cmd_ubuntu:v2
+  453  vi Dockerfile 
+  454  docker run -it mohinstru87/cmd_ubuntu:v2
+  455  docker build -t mohinstru87/cmd_ubuntu:v2 .
+  456  docker run -it mohinstru87/cmd_ubuntu:v2
+  457  docker ps
+  458  vi Dockerfile 
+  459  docker build -t mohinstru87/cmd_ubuntu:v2 .
+  460  docker run -it mohinstru87/cmd_ubuntu:v2
+  461  docker ps
+  462  docker run -it mohinstru87/cmd_ubuntu:v2
+  463  docker ps
+  464  ls
+  465  mkdir ENTRY_POINT
+  466  cd ENTRY_POINT/
+  467  ls
+  468  vi Dockerfile
+  469  docker build -t mohinstru87/Entry_ubuntu:V2
+  470  docker build -t mohinstru87/Entry_ubuntu:V2 .
+  471  ls
+  472  docker run -it mohinstru87/Entry_ubuntu:v1
+  473  docker run -it mohinstru87/Entry_ubuntu:v1 .
+  474  docker run -it mohinstru87/entry_ubuntu:v1 .
+  475  docker build -t mohinstru87/entry_ubuntu:v1 .
+  476  vi Dockerfile 
+  477  docker build -t mohinstru87/entry_ubuntu:v1 .
+  478  docker run -it mohinstru87/ubuntu:v1
+  479  docker run -it mohinstru87/entry_ubuntu:v1
+  480  docker ps
+  481  docker run -it mohinstru87/entry_ubuntu:v1
+  482  docker run -it mohinstru87/entry_ubuntu:v1 /bin/echo
+  483  docker images
+  484  docker run -it mohinstru87/cmd_ubuntu:v1 /bin/echo "hello dear"
+  485  cd ..
+  486  ls
+  487  vi Dockerfile 
+  488  docker build -t mohinstru87/cmd_ubuntu:v2
+  489  docker build -t mohinstru87/cmd_ubuntu:v2 .
+  490  docker run -it mohinstru87/cmd_ubuntu:v2
+  491  docker run -it mohinstru87/cmd_ubuntu:v2 /bin/echo "hai how are you"
+  492  mkdir Apache_expose_entrypoint
+  493  cd Apache_expose_entrypoint/
+  494  ls
+  495  vi Dockerfile
+  496  docker newtork inspect ls
+  497  docker newtork ls
+  498  docker network ls
+  499  docker network inspect bridge
+  500  exit
+  501  docker network inspect host
+  502  docker network inspect none
+  503  docker network ls
+  504  docker network ls --no-trunc
+  505  docker network ls
+  506  docker network create --subnet 10.1.0.0/24 --gateway 10.1.0.1 mybridge
+  507  docker network ls
+  508  docker rm mybridge
+  509  docker network  rm mybridge
+  510  ifconfig
+  511  docker inspect bridge
+  512  docker network ls
+  513  docker network create --subnet 10.1.0.0/16 --gateway 10.1.0.1 --ip-range=10.1.3.0/24 --label=bridgenetworks mybridge
+  514  docker network ls
+  515  netstat -rn
+  516  ifconfig
+  517  docker run -it --name myubu --net mybridge ubuntu:latest
+  518  docker run -itd --name myubu --net mybridge --ip 10.1.4.108 ubuntu:latest
+  519  docker run -itd --name myubun --net mybridge --ip 10.1.4.108 ubuntu:latest
+  520  docker inspect | grep IPA
+  521  docker ps
+  522  docker inspect myubun | grep IPA
+  523  history 
+  524  history >> MY_DOCKER_COMMANDS
